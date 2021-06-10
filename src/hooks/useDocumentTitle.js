@@ -1,10 +1,11 @@
-import useEffect from 'react';
+import { useEffect } from 'react';
 
-function useDocumentTitle() {
+export default function useDocumentTitle(title) {
 	useEffect(() => {
-		document.title = `${name} has clicked ${count} times`;
+		document.title = title;
+
 		return () => {
 			console.log('Clean up');
 		};
-	}, []);
+	});
 }
