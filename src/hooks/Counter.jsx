@@ -4,10 +4,6 @@ function Counter(props) {
 	const [count, setCount] = useState(0);
 	const [name, setName] = useState('');
 
-	useEffect(() => {
-		document.title = `${name} has clicked ${count} times`;
-	}, [count]); // dependent only on count
-
 	// componentDidMount
 	// componentDidUpdate
 	// componentWillUnmount
